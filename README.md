@@ -24,8 +24,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 To learn more about Next.js, take a look at the following resources:
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
@@ -35,6 +35,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+```txt
 my-nextjs-app/
 ├── .github/ # GitHub specific files
 │ └── workflows/ # CI/CD workflows
@@ -47,91 +48,91 @@ my-nextjs-app/
 │ ├── icons/ # Favicons, app icons
 │ └── robots.txt # SEO crawling rules
 │
-├── src/ # Source code (recommended)
+├── src/ # Source code
 │ ├── app/ # App Router (Next.js 13+)
-│ │ │
-│ │ ├── (marketing)/ # 🟢 ROUTE GROUP: Public pages with Header + Footer
-│ │ │ ├── layout.tsx # Marketing layout (Header + Footer)
+│ │
+│ │ ├── (marketing)/ # ROUTE GROUP: Public pages
+│ │ │ ├── layout.tsx # Marketing layout
 │ │ │ ├── about/
-│ │ │ │ └── page.tsx # /about page
+│ │ │ │ └── page.tsx
 │ │ │ ├── contact/
-│ │ │ │ └── page.tsx # /contact page
+│ │ │ │ └── page.tsx
 │ │ │ ├── pricing/
-│ │ │ │ └── page.tsx # /pricing page
+│ │ │ │ └── page.tsx
 │ │ │ └── blog/
-│ │ │ ├── page.tsx # /blog listing page
+│ │ │ ├── page.tsx # blog listing
 │ │ │ └── [slug]/
-│ │ │ └── page.tsx # /blog/[slug] dynamic route
-│ │ │
-│ │ ├── (dashboard)/ # 🟡 ROUTE GROUP: Protected pages with Sidebar
-│ │ │ ├── layout.tsx # Dashboard layout (Sidebar + Header, NO footer)
+│ │ │ └── page.tsx # blog/[slug]
+│ │
+│ │ ├── (dashboard)/ # ROUTE GROUP: Protected pages
+│ │ │ ├── layout.tsx # Sidebar + Header (no footer)
 │ │ │ ├── dashboard/
-│ │ │ │ └── page.tsx # /dashboard page
+│ │ │ │ └── page.tsx
 │ │ │ ├── analytics/
-│ │ │ │ └── page.tsx # /analytics page
+│ │ │ │ └── page.tsx
 │ │ │ ├── settings/
-│ │ │ │ └── page.tsx # /settings page
+│ │ │ │ └── page.tsx
 │ │ │ └── users/
-│ │ │ ├── page.tsx # /users listing
+│ │ │ ├── page.tsx # listing
 │ │ │ └── [id]/
-│ │ │ └── page.tsx # /users/[id] detail
-│ │ │
-│ │ ├── (auth)/ # 🔵 ROUTE GROUP: Auth pages (Centered card, no header/footer)
-│ │ │ ├── layout.tsx # Auth layout (centered card)
+│ │ │ └── page.tsx # detail
+│ │
+│ │ ├── (auth)/ # ROUTE GROUP: Auth pages
+│ │ │ ├── layout.tsx # Centered layout
 │ │ │ ├── login/
-│ │ │ │ └── page.tsx # /login page
+│ │ │ │ └── page.tsx
 │ │ │ ├── register/
-│ │ │ │ └── page.tsx # /register page
+│ │ │ │ └── page.tsx
 │ │ │ └── forgot-password/
-│ │ │ └── page.tsx # /forgot-password page
-│ │ │
-│ │ ├── (fullscreen)/ # ⚪ ROUTE GROUP: Fullscreen pages (no chrome)
+│ │ │ └── page.tsx
+│ │
+│ │ ├── (fullscreen)/ # ROUTE GROUP: Fullscreen pages
 │ │ │ └── editor/
-│ │ │ └── page.tsx # /editor page (no layout.tsx)
-│ │ │
+│ │ │ └── page.tsx
+│ │
 │ │ ├── api/ # API routes
 │ │ │ ├── auth/
 │ │ │ │ ├── login/
-│ │ │ │ │ └── route.ts # /api/auth/login
+│ │ │ │ │ └── route.ts
 │ │ │ │ ├── register/
-│ │ │ │ │ └── route.ts # /api/auth/register
+│ │ │ │ │ └── route.ts
 │ │ │ │ └── logout/
-│ │ │ │ └── route.ts # /api/auth/logout
+│ │ │ │ └── route.ts
 │ │ │ └── users/
-│ │ │ ├── route.ts # /api/users (GET, POST)
+│ │ │ ├── route.ts # GET, POST
 │ │ │ └── [id]/
-│ │ │ └── route.ts # /api/users/[id] (GET, PUT, DELETE)
-│ │ │
-│ │ ├── layout.tsx # Root layout (wraps all pages)
-│ │ ├── page.tsx # Home page (/)
+│ │ │ └── route.ts # GET, PUT, DELETE
+│ │
+│ │ ├── layout.tsx # Root layout
+│ │ ├── page.tsx # Home page
 │ │ ├── loading.tsx # Loading UI
 │ │ ├── error.tsx # Error UI
 │ │ ├── not-found.tsx # 404 page
 │ │ └── globals.css # Global styles
-│ │
+│
 │ ├── components/ # React components
-│ │ ├── ui/ # Reusable UI components
+│ │ ├── ui/
 │ │ │ ├── Button.tsx
 │ │ │ ├── Input.tsx
 │ │ │ ├── Modal.tsx
 │ │ │ ├── Card.tsx
 │ │ │ ├── Badge.tsx
 │ │ │ ├── Dropdown.tsx
-│ │ │ └── index.ts # Barrel export
+│ │ │ └── index.ts
 │ │ │
-│ │ ├── forms/ # Form components
+│ │ ├── forms/
 │ │ │ ├── LoginForm.tsx
 │ │ │ ├── RegisterForm.tsx
 │ │ │ └── ContactForm.tsx
 │ │ │
-│ │ ├── layout/ # Layout components
-│ │ │ ├── Header.tsx # Marketing header
-│ │ │ ├── Footer.tsx # Marketing footer
-│ │ │ ├── Sidebar.tsx # Dashboard sidebar
-│ │ │ ├── DashboardHeader.tsx # Dashboard header
-│ │ │ └── Navbar.tsx # Generic navbar
+│ │ ├── layout/
+│ │ │ ├── Header.tsx
+│ │ │ ├── Footer.tsx
+│ │ │ ├── Sidebar.tsx
+│ │ │ ├── DashboardHeader.tsx
+│ │ │ └── Navbar.tsx
 │ │ │
-│ │ └── features/ # Feature-specific components
+│ │ └── features/
 │ │ ├── blog/
 │ │ │ ├── BlogCard.tsx
 │ │ │ ├── BlogList.tsx
@@ -144,76 +145,76 @@ my-nextjs-app/
 │ │ ├── StatsCard.tsx
 │ │ ├── Chart.tsx
 │ │ └── RecentActivity.tsx
-│ │
-│ ├── lib/ # Utility functions & configurations
-│ │ ├── api.ts # API client/fetch wrappers
-│ │ ├── utils.ts # General utilities (cn, formatDate, etc.)
-│ │ ├── validations.ts # Validation schemas (Zod, Yup)
-│ │ ├── constants.ts # App constants
-│ │ └── db.ts # Database connection (if using)
-│ │
-│ ├── hooks/ # Custom React hooks
+│
+│ ├── lib/
+│ │ ├── api.ts
+│ │ ├── utils.ts
+│ │ ├── validations.ts
+│ │ ├── constants.ts
+│ │ └── db.ts
+│
+│ ├── hooks/
 │ │ ├── useAuth.ts
 │ │ ├── useUser.ts
 │ │ ├── useLocalStorage.ts
 │ │ ├── useDebounce.ts
 │ │ └── useFetch.ts
-│ │
-│ ├── context/ # React Context providers
+│
+│ ├── context/
 │ │ ├── AuthContext.tsx
 │ │ ├── ThemeContext.tsx
 │ │ └── index.tsx
-│ │
-│ ├── store/ # State management (Redux/Zustand)
+│
+│ ├── store/
 │ │ ├── slices/
 │ │ │ ├── authSlice.ts
 │ │ │ └── userSlice.ts
 │ │ └── store.ts
-│ │
-│ ├── types/ # TypeScript types & interfaces
+│
+│ ├── types/
 │ │ ├── index.ts
 │ │ ├── user.ts
 │ │ ├── api.ts
 │ │ └── common.ts
-│ │
-│ ├── styles/ # Additional styles
-│ │ ├── variables.css # CSS variables
-│ │ └── mixins.scss # SCSS mixins (if using SCSS)
-│ │
-│ ├── config/ # App configuration
-│ │ ├── site.ts # Site metadata
-│ │ ├── routes.ts # Route constants
-│ │ └── env.ts # Environment variables validation
-│ │
-│ ├── services/ # External services & API calls
+│
+│ ├── styles/
+│ │ ├── variables.css
+│ │ └── mixins.scss
+│
+│ ├── config/
+│ │ ├── site.ts
+│ │ ├── routes.ts
+│ │ └── env.ts
+│
+│ ├── services/
 │ │ ├── authService.ts
 │ │ ├── userService.ts
 │ │ └── emailService.ts
-│ │
-│ ├── actions/ # Server Actions (Next.js 13+)
+│
+│ ├── actions/
 │ │ ├── userActions.ts
 │ │ └── authActions.ts
-│ │
-│ ├── middleware.ts # Next.js middleware (auth, redirects)
-│ │
-│ └── instrumentation.ts # Instrumentation hooks (optional)
 │
-├── tests/ # Test files
+│ ├── middleware.ts
+│ └── instrumentation.ts
+│
+├── tests/
 │ ├── unit/
 │ ├── integration/
 │ └── e2e/
 │
-├── .env.local # Local environment variables (gitignored)
-├── .env.example # Example env file (committed)
-├── .eslintrc.json # ESLint configuration
-├── .gitignore # Git ignore rules
-├── .prettierrc # Prettier configuration
-├── next.config.js # Next.js configuration
-├── package.json # Dependencies & scripts
-├── tsconfig.json # TypeScript configuration
-├── tailwind.config.ts # Tailwind CSS config (if using)
-├── postcss.config.js # PostCSS config
-└── README.md # Project documentation
+├── .env.local
+├── .env.example
+├── .eslintrc.json
+├── .gitignore
+├── .prettierrc
+├── next.config.js
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+├── postcss.config.js
+└── README.md
+```
 
 ═══════════════════════════════════════════════════════════════════
 📊 ROUTE GROUPS EXPLAINED
@@ -299,6 +300,7 @@ They're purely for organization.
 📋 LAYOUT HIERARCHY
 ═══════════════════════════════════════════════════════════════════
 
+```txt
 Root Layout (app/layout.tsx)
 │
 ├─ Marketing Layout (app/(marketing)/layout.tsx)
@@ -319,6 +321,7 @@ Root Layout (app/layout.tsx)
 │
 └─ Fullscreen (NO layout, just root)
 └─ Editor Page
+```
 
 Layouts are NESTED: Child layouts wrap inside parent layouts
 Example: About page gets wrapped by Marketing Layout, which is
@@ -331,35 +334,35 @@ KEY CONCEPTS & NAMING CONVENTIONS
 📁 APP ROUTER SPECIAL FILES (src/app/):
 ────────────────────────────────────────
 
--   page.tsx → Creates a route (required for each route)
--   layout.tsx → Shared UI for a segment and its children
--   loading.tsx → Loading UI (Suspense boundary)
--   error.tsx → Error UI (Error boundary)
--   not-found.tsx → 404 UI
--   route.ts → API endpoint
--   template.tsx → Re-rendered layout (doesn't persist state)
--   default.tsx → Fallback for parallel routes
+- page.tsx → Creates a route (required for each route)
+- layout.tsx → Shared UI for a segment and its children
+- loading.tsx → Loading UI (Suspense boundary)
+- error.tsx → Error UI (Error boundary)
+- not-found.tsx → 404 UI
+- route.ts → API endpoint
+- template.tsx → Re-rendered layout (doesn't persist state)
+- default.tsx → Fallback for parallel routes
 
 📁 ROUTE TYPES:
 ────────────────────────────────────────
 
--   /app/page.tsx → Static route: /
--   /app/about/page.tsx → Static route: /about
--   /app/blog/[slug]/page.tsx → Dynamic route: /blog/:slug
--   /app/shop/[...slug]/page.tsx → Catch-all: /shop/\*
--   /app/docs/[[...slug]]/page.tsx → Optional catch-all
--   /app/(auth)/login/page.tsx → Route group (no URL segment)
--   /app/\_components/Header.tsx → Private folder (not routable)
+- /app/page.tsx → Static route: /
+- /app/about/page.tsx → Static route: /about
+- /app/blog/[slug]/page.tsx → Dynamic route: /blog/:slug
+- /app/shop/[...slug]/page.tsx → Catch-all: /shop/\*
+- /app/docs/[[...slug]]/page.tsx → Optional catch-all
+- /app/(auth)/login/page.tsx → Route group (no URL segment)
+- /app/\_components/Header.tsx → Private folder (not routable)
 
 📁 FILE NAMING:
 ────────────────────────────────────────
 
--   Components: PascalCase (Button.tsx, UserProfile.tsx)
--   Utilities: camelCase (formatDate.ts, apiClient.ts)
--   Hooks: camelCase with 'use' prefix (useAuth.ts, useFetch.ts)
--   Types: PascalCase (User.ts, ApiResponse.ts)
--   Constants: UPPER_SNAKE_CASE in constants.ts
--   API routes: route.ts (Next.js convention)
+- Components: PascalCase (Button.tsx, UserProfile.tsx)
+- Utilities: camelCase (formatDate.ts, apiClient.ts)
+- Hooks: camelCase with 'use' prefix (useAuth.ts, useFetch.ts)
+- Types: PascalCase (User.ts, ApiResponse.ts)
+- Constants: UPPER_SNAKE_CASE in constants.ts
+- API routes: route.ts (Next.js convention)
 
 📁 IMPORT ALIASES (tsconfig.json):
 ────────────────────────────────────────
@@ -396,28 +399,28 @@ PRO TIPS FOR ROUTE GROUPS
 
 ✅ DO:
 
--   Use route groups to organize pages by layout type
--   Name groups semantically: (marketing), (dashboard), (auth)
--   Keep route group layouts in the group folder: (marketing)/layout.tsx
--   Use parentheses () to exclude folder name from URL
--   Colocate related pages in the same group
--   Use multiple route groups for different sections
+- Use route groups to organize pages by layout type
+- Name groups semantically: (marketing), (dashboard), (auth)
+- Keep route group layouts in the group folder: (marketing)/layout.tsx
+- Use parentheses () to exclude folder name from URL
+- Colocate related pages in the same group
+- Use multiple route groups for different sections
 
 ❌ DON'T:
 
--   Create route groups just for organization (use regular folders)
--   Nest route groups unnecessarily
--   Put shared components in route groups (use /components)
--   Forget the parentheses (dashboard vs (dashboard))
--   Mix different layout types in the same group
+- Create route groups just for organization (use regular folders)
+- Nest route groups unnecessarily
+- Put shared components in route groups (use /components)
+- Forget the parentheses (dashboard vs (dashboard))
+- Mix different layout types in the same group
 
 🎯 WHEN TO CREATE A NEW ROUTE GROUP:
 
--   Pages need a different layout structure
--   Different authentication requirements
--   Different navigation/header/footer
--   Grouping by user role (admin, user, guest)
--   Different styling/themes
+- Pages need a different layout structure
+- Different authentication requirements
+- Different navigation/header/footer
+- Grouping by user role (admin, user, guest)
+- Different styling/themes
 
 🎯 SCALABILITY:
 For larger apps, consider feature-based structure within route groups:
@@ -429,3 +432,34 @@ layout.tsx
 dashboard/
 analytics/
 settings/
+
+---
+
+---
+
+<!-- ### ✔ Project Goals
+
+| Task       | Status |
+| ---------- | ------ |
+| Task one   | [ ]    |
+| Task two   | [ ]    |
+| Task three | [ ]    |
+ -->
+
+### Skill Progress
+
+| Category               | Skills                                                                                                                                                                                            |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Core Programming**   | - [ ] JavaScript <br> - [ ] TypeScript <br> - [ ] Java <br> - [ ] C++ <br> - [ ] Rust <br> - [ ] Kotlin                                                                                           |
+| **Web Foundations**    | - [ ] HTML5 <br> - [ ] CSS3 <br> - [ ] DOM <br> - [ ] Web APIs <br> - [ ] Accessibility <br> - [ ] Web Assembly                                                                                   |
+| **Frontend**           | - [ ] React <br> - [ ] Next.js <br> - [ ] Zustand <br> - [ ] Redux <br> - [ ] GSAP <br> - [ ] Framer Motion <br> - [ ] Tailwind CSS <br> - [ ] Anime js                                           |
+| **Backend**            | - [ ] Node.js <br> - [ ] Express.js <br> - [ ] NestJS <br> - [ ] REST APIs <br> - [ ] GraphQL <br> - [ ] Microservices <br> - [ ] Authentication <br> - [ ] Authorization                         |
+| **Databases**          | - [ ] MongoDB <br> - [ ] PostgreSQL <br> - [ ] MySQL <br> - [ ] Redis <br> - [ ] Prisma ORM <br> - [ ] Query Optimization <br> - [ ] Indexing                                                     |
+| **DevOps**             | - [ ] Docker <br> - [ ] Docker Compose <br> - [ ] Kubernetes Basics <br> - [ ] CI/CD <br> - [ ] GitHub Actions <br> - [ ] Git Hooks <br> - [ ] Jenkins <br> - [ ] Nginx <br> - [ ] Load Balancing |
+| **Cloud / Deploy**     | - [ ] AWS EC2 <br> - [ ] AWS S3 <br> - [ ] AWS Lambda <br> - [ ] Vercel <br> - [ ] Render <br> - [ ] Railway <br> - [ ] Netlify <br> - [ ] Cloudflare <br> - [ ] PM2                              |
+| **System Engineering** | - [ ] OS Concepts <br> - [ ] Processes <br> - [ ] Threads <br> - [ ] Deadlocks <br> - [ ] Networking (TCP/IP, DNS, HTTP/2/3) <br> - [ ] Shell Scripting                                           |
+| **WASM / Low-Level**   | - [ ] Rust → WASM <br> - [ ] wasm-pack <br> - [ ] WebAssembly <br> - [ ] WebGPU Basics <br> - [ ] Perf Optimization                                                                               |
+| **Motion & Design**    | - [ ] Motion Design <br> - [ ] After Effects <br> - [ ] Blender <br> - [ ] Natron <br> - [ ] Figma <br> - [ ] UI/UX Flow                                                                          |
+| **Testing**            | - [ ] Jest <br> - [ ] React Testing Library <br> - [ ] Cypress <br> - [ ] Postman <br> - [ ] API Contract Testing                                                                                 |
+| **Tools**              | - [ ] Git <br> - [ ] VS Code Workflow <br> - [ ] Turborepo <br> - [ ] pnpm <br> - [ ] Yarn <br> - [ ] ESLint <br> - [ ] Prettier <br> - [ ] Husky <br> - [ ] Commitlint                           |
+| **System Design**      | - [ ] Caching <br> - [ ] Load Balancing <br> - [ ] Queues <br> - [ ] CAP Theorem <br> - [ ] Event-Driven Systems <br> - [ ] Scalability Patterns                                                  |
