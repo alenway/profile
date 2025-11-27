@@ -437,15 +437,6 @@ settings/
 
 ---
 
-<!-- ### ✔ Project Goals
-
-| Task       | Status |
-| ---------- | ------ |
-| Task one   | [ ]    |
-| Task two   | [ ]    |
-| Task three | [ ]    |
- -->
-
 ### Skill Progress
 
 | Category               | Skills                                                                                                                                                                                            |
