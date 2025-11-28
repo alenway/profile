@@ -36,6 +36,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ```txt
+
 my-nextjs-app/
 ├── .github/ # GitHub specific files
 │ └── workflows/ # CI/CD workflows
@@ -212,8 +213,11 @@ my-nextjs-app/
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.ts
+├── Dockerfile
+├── .dockerignore
 ├── postcss.config.js
 └── README.md
+
 ```
 
 ═══════════════════════════════════════════════════════════════════
@@ -441,12 +445,12 @@ settings/
 
 | Category               | Skills                                                                                                                                                                                            |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Core Programming**   | - [ ] JavaScript <br> - [ ] TypeScript <br> - [ ] Java <br> - [ ] C++ <br> - [ ] Rust <br> - [ ] Kotlin                                                                                           |
-| **Web Foundations**    | - [ ] HTML5 <br> - [ ] CSS3 <br> - [ ] DOM <br> - [ ] Web APIs <br> - [ ] Accessibility <br> - [ ] Web Assembly                                                                                   |
-| **Frontend**           | - [ ] React <br> - [ ] Next.js <br> - [ ] Zustand <br> - [ ] Redux <br> - [ ] GSAP <br> - [ ] Framer Motion <br> - [ ] Tailwind CSS <br> - [ ] Anime js                                           |
-| **Backend**            | - [ ] Node.js <br> - [ ] Express.js <br> - [ ] NestJS <br> - [ ] REST APIs <br> - [ ] GraphQL <br> - [ ] Microservices <br> - [ ] Authentication <br> - [ ] Authorization                         |
+| **Core Programming**   | - [x] JavaScript <br> - [x] TypeScript <br> - [ ] Java <br> - [ ] C++ <br> - [ ] Rust <br> - [ ] Kotlin                                                                                           |
+| **Web Foundations**    | - [x] HTML5 <br> - [x] CSS3 <br> - [x] DOM <br> - [ ] Web APIs <br> - [ ] Accessibility                                                                                                           |
+| **Frontend**           | - [x] React <br> - [x] Next.js <br> - [ ] Zustand <br> - [ ] Redux <br> - [ ] GSAP <br> - [ ] Framer Motion <br> - [x] Tailwind CSS <br> - [ ] Anime js                                           |
+| **Backend**            | - [x] Node.js <br> - [x] Express.js <br> - [ ] NestJS <br> - [ ] REST APIs <br> - [ ] GraphQL <br> - [ ] Microservices <br> - [ ] Authentication <br> - [ ] Authorization                         |
 | **Databases**          | - [ ] MongoDB <br> - [ ] PostgreSQL <br> - [ ] MySQL <br> - [ ] Redis <br> - [ ] Prisma ORM <br> - [ ] Query Optimization <br> - [ ] Indexing                                                     |
-| **DevOps**             | - [ ] Docker <br> - [ ] Docker Compose <br> - [ ] Kubernetes Basics <br> - [ ] CI/CD <br> - [ ] GitHub Actions <br> - [ ] Git Hooks <br> - [ ] Jenkins <br> - [ ] Nginx <br> - [ ] Load Balancing |
+| **DevOps**             | - [x] Docker <br> - [ ] Docker Compose <br> - [ ] Kubernetes Basics <br> - [ ] CI/CD <br> - [ ] GitHub Actions <br> - [ ] Git Hooks <br> - [ ] Jenkins <br> - [ ] Nginx <br> - [ ] Load Balancing |
 | **Cloud / Deploy**     | - [ ] AWS EC2 <br> - [ ] AWS S3 <br> - [ ] AWS Lambda <br> - [ ] Vercel <br> - [ ] Render <br> - [ ] Railway <br> - [ ] Netlify <br> - [ ] Cloudflare <br> - [ ] PM2                              |
 | **System Engineering** | - [ ] OS Concepts <br> - [ ] Processes <br> - [ ] Threads <br> - [ ] Deadlocks <br> - [ ] Networking (TCP/IP, DNS, HTTP/2/3) <br> - [ ] Shell Scripting                                           |
 | **WASM / Low-Level**   | - [ ] Rust → WASM <br> - [ ] wasm-pack <br> - [ ] WebAssembly <br> - [ ] WebGPU Basics <br> - [ ] Perf Optimization                                                                               |
@@ -454,3 +458,55 @@ settings/
 | **Testing**            | - [ ] Jest <br> - [ ] React Testing Library <br> - [ ] Cypress <br> - [ ] Postman <br> - [ ] API Contract Testing                                                                                 |
 | **Tools**              | - [ ] Git <br> - [ ] VS Code Workflow <br> - [ ] Turborepo <br> - [ ] pnpm <br> - [ ] Yarn <br> - [ ] ESLint <br> - [ ] Prettier <br> - [ ] Husky <br> - [ ] Commitlint                           |
 | **System Design**      | - [ ] Caching <br> - [ ] Load Balancing <br> - [ ] Queues <br> - [ ] CAP Theorem <br> - [ ] Event-Driven Systems <br> - [ ] Scalability Patterns                                                  |
+
+---
+
+# Docker
+
+````markdown
+## 🐳 Docker Support
+
+### Quick Start
+
+Run this project with one command:
+
+```bash
+docker run -p 3000:3000 narendrasamtani/portfolio-website:latest
+```
+````
+
+### Docker Image
+
+The Docker image contains a production-ready build of this Next.js application with all dependencies included.
+
+**Image URL:** https://hub.docker.com/r/narendrasamtani/portfolio-website
+
+### What's Included in the Image
+
+- ✅ Production-optimized Next.js build
+- ✅ Node.js runtime environment
+- ✅ All dependencies pre-installed
+- ✅ Static files and assets
+- ✅ Ready-to-run application
+
+### For Development
+
+If you want to contribute or modify the code:
+
+```bash
+# 1. Clone this repository
+git clone https://github.com/yourusername/portfolio-website
+
+# 2. Use local development server (recommended)
+pnpm dev
+
+# 3. Or build with Docker
+docker build -t portfolio-website .
+docker run -p 3000:3000 portfolio-website
+```
+
+### Image Tags
+
+- `latest` - Most recent stable version
+- `dev` - Development build
+- `v1.x.x` - Versioned releases
